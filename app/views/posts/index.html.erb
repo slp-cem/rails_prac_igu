@@ -1,6 +1,6 @@
 <h1>記事一覧</h1>
 
-<table border='1'>
+<table class="table table-condensed table-striped">
   <thead>
     <tr>
       <th>タイトル</th>
@@ -13,11 +13,11 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.main %></td>
-      <td><%= link_to "編集", edit_post_path(post) %> | <%= link_to "削除", post_path(post), method: :delete %></td>
+      <td><%= link_to "編集", edit_post_path(post), class: "btn btn-xs btn-info" %> <%= link_to "削除", post_path(post), method: :delete, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
 
 <br />
-<%= link_to '追加', new_post_path %>
+<%= link_to '追加', new_post_path, class: "btn btn-info" %>

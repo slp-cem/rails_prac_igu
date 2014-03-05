@@ -1,13 +1,16 @@
 <h1>記事の変更</h1>
 
-<%= form_for @post do |f| %>
-  <%= f.label 'タイトル' %>
-  <%= f.text_field :title %>
-  <br />
+<div role="form">
+  <%= form_for @post do |f| %>
+    <div class="form-group" >
+      <%= f.label 'タイトル' %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
 
-  <%= f.label '内容' %>
-  <%= f.text_field :main %>
-  <br />
-
-  <%= f.submit %>
+    <div class="form-group">
+      <%= f.label '内容' %>
+      <%= f.text_field :main, class: "form-control" %>
+    </div>
+    <%= f.submit "更新", class: "btn btn-info" %>
 <% end %>
+</div>

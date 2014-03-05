@@ -11,7 +11,6 @@ class PostsController < ApplicationController
     render text: "success"
   end
   def edit
-    render text: params and return
     @post = Post.where(id: params[:id]).first
   end
   def update
