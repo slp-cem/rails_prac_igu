@@ -1,0 +1,13 @@
+<h1>記事の投稿</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label 'タイトル' %>
+  <%= f.text_field :title %>
+  <br />
+
+  <%= f.label '内容' %>
+  <%= f.text_field :main %>
+  <br />
+
+  <%= f.submit %>
+<% end %>
